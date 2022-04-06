@@ -39,12 +39,11 @@ describe("Login test", ()=>{
         login.submit().should('be.disabled')
     })
 
-    it("should be able to click submit and detect incorrect password", ()=> {
+    it("should be able to click submit with valid email and passwordss", ()=> {
         //its advisable to put your login values in a dotenv and import it
         login.enterEmail("aniakuchibuike@gmail.com")
         login.enterPassword("Password9%")
         login.submit().click()
-        login.container('The authentication is invalid!')
     })
 
 })
